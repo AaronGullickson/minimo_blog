@@ -1,5 +1,5 @@
 baseURL = "http://www.example.com"
-title = "Minimo"
+title = "Aaron Gullickson"
 # for smart copyright line, leave this blank and check [params.copyright]
 copyright = ""
 
@@ -22,7 +22,7 @@ enableEmoji = true
 defaultContentLanguage = "en"
 
 [params.info]
-description = "Minimalist theme for Hugo"
+description = "Sociologist and Data Geek"
 title404 = "Nothing's here!"
 
 [params.assets]
@@ -48,16 +48,16 @@ showReadingTime = true
 showLastmod = true
 taxonomyCloudShuffle = true
 accentColor = "#ffcd00"
-hideMainMenu = false
+hideMainMenu = true
 
 [params.sidebar]
 enable = true
 
 [params.widgets]
-header = ["breadcrumbs"]
+header = []
 homepage = ["recent_posts"]
-sidebar = ["about","search","sidebar_menu","taxonomy_cloud"]
-footer = ["social_menu"]
+sidebar = ["about","sidebar_menu","social_menu","taxonomy_cloud"]
+footer = []
 
 [params.opengraph.facebook]
 admins = [] # array of Facebook IDs
@@ -72,17 +72,17 @@ page = "" # Twitter page username
 titleSeparator = "•"
 
 [params.social]
-codepen = "MunifTanjim"
-email = "contact@example.com"
-facebook = "MunifTanjim"
-github = "MunifTanjim"
-gitlab = "MunifTanjim"
-instagram = "MunifTanjim"
-linkedin = "muniftanjim"
-twitter = "MunifTanjim"
-telegram = "MunifTanjim"
-google_scholar = "qc6CJjYAAAAJ"
-youtube = "UCT-U0rNerYxItGcuoPX-WYA"
+#codepen = "MunifTanjim"
+email = "aarong@uoregon.edu"
+#facebook = "MunifTanjim"
+github = "AaronGullickson"
+#gitlab = "MunifTanjim"
+#instagram = "MunifTanjim"
+#linkedin = "muniftanjim"
+twitter = "AaronGullickson"
+#telegram = "MunifTanjim"
+google_scholar = "LCTjizQAAAAJ"
+#youtube = "UCT-U0rNerYxItGcuoPX-WYA"
 
 [params.comments]
 enable = false
@@ -128,11 +128,18 @@ tag = "tags"
 [permalinks]
 page = "/:slug/"
 
+
+[menu]
 [[menu.main]]
-name = "Repo"
-weight = -10
-identifier = "repository"
-url = "https://github.com/MunifTanjim/minimo"
+  identifier = "about"
+  name = "About Me"
+  url = '/about/'
+  weight = -110
+[[menu.main]]
+  identifier = "cv"
+  name = "CV"
+  url = '/cv/'
+  weight = -90
 
 [blackfriday]
 hrefTargetBlank = true
