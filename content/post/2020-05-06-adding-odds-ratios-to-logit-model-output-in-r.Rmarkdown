@@ -16,6 +16,7 @@ image:
   focal_point: ''
   preview_only: no
 projects: []
+mathjax: true
 ---
 
 I recently received an email from an undergraduate student who had taken my statistics course. This student was working on their undergraduate thesis project in which they were running logit models in *R*. Their thesis adviser had asked them to produce odds ratios which is not reported in the `summary` command for a generalized linear model in *R*. Apparently, the advisor was used to programs like Stata that include the argument `or` to get odds ratios from logit models in the default output.

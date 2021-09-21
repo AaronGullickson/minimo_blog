@@ -14,6 +14,7 @@ image:
   focal_point: ''
   preview_only: no
 projects: []
+mathjax: true
 ---
 
 There has been a lot of interest in the log-linear methods used to measure exchange in [my 2006 Demography article](http://link.springer.com/article/10.1353/dem.2006.0033#page-1) and in my [2014 Demography article](http://link.springer.com/article/10.1007/s13524-014-0300-2) with [Florencia Torche](https://sociology.stanford.edu/people/florencia-torche). However, many people have expressed that the methods seem complex. In an effort to help people understand these models, I am providing here some basic code written in R that sets up the "market" and "dyadic" exchange models that we fit in Gullickson and Torche (2014).

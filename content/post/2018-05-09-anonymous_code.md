@@ -14,6 +14,7 @@ image:
   focal_point: ''
   preview_only: no
 projects: []
+mathjax: true
 ---
 
 Posting the underlying code and data for the statistical analysis in an academic paper is becoming a more common practice, although hardly universal in many disciplines. However, even when code and data are posted, it is usually made available upon publication of the paper, leaving out those who would benefit the most from access: the anonymous peer reviewers of the manuscript. Shouldn't the people who will put your work to the most scrutiny be the ones who have full access to see exactly what you did? 

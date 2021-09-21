@@ -14,6 +14,7 @@ image:
   focal_point: ''
   preview_only: no
 projects: []
+mathjax: true
 ---
 
 For most of my career, I have been pretty old-school in my use of open source tools. Not [vi](http://ex-vi.sourceforge.net/) old-school, mind you, but still old school. I primarily used the venerable [emacs](https://www.gnu.org/software/emacs/) editor to both write [R](https://www.r-project.org/) code and to write papers in [LaTeX](https://www.latex-project.org/). Although I have experimented a bit with [Sweave](http://www.statistik.lmu.de/~leisch/Sweave/), I generally just manually constructed my tables in LaTeX after I was satisfied with the analysis and produced my figures as EPS files for inclusion in LaTeX at runtime. Over the years, I have accumulated a substantial amount of code that goes into my LaTeX preamble that makes it come out *just so* and also allows me to adjust it to the often silly and idiosyncratic demands of journals for manuscript preparation. Then, when I get an acceptance, I often have to figure out how to manually convert my nice LaTeX pdfs into an awful Word document, because sociology journals. This is never a fun experience but the benefits of using LaTeX seemed to outweigh it.

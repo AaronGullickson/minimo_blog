@@ -14,6 +14,7 @@ image:
   focal_point: ''
   preview_only: no
 projects: []
+mathjax: true
 ---
 
 While I have done data analysis almost exclusively in R for most of my career, until recently I have done a lot of my data cleaning in Stata. I have even told people in the past that I though Stata was better at data cleaning than R. However, when I switched my graduate statistics class from Stata to R last year, I decided that I needed to teach my students how to clean data in R. True to the old saying, there is no better way to learn than teach. In this case, I realized that my attitude toward data cleaning in R was more about my lack of familiarity with some nice utilities in R than it was about R itself. 
