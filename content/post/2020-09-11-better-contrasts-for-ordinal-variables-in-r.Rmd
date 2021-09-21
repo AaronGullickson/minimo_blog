@@ -16,6 +16,7 @@ image:
   focal_point: ''
   preview_only: no
 projects: []
+mathjax: true
 ---
 
 Social scientists routinely use categorical variables in linear models. In order to do so, we must code these categorical variables into numeric quantities in some fashion. By far the most common method is the dummy/indicator variable approach. In this approach, we create 0/1 variables for each category where 1 indicates membership in the category. We leave out this coding for one category which becomes the reference category. The estimate for each parameter then gives the mean difference between the indicated category and the reference category, all else being equal. This approach is so ubiquitous that many researchers are probably unaware of the many alternatives that exist for how to code categorical variables. Here I want to highlight an alternative method in R for the case of ordinal variables that can be used to produce much more intuitive results.
@@ -158,5 +159,3 @@ contrasts(earnings$education)
 model_final <- lm(wages~education, data=earnings)
 knitr::kable(coef(model_final, 2), col.names="coefficients")
 ```
-
-

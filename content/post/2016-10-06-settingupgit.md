@@ -14,6 +14,7 @@ image:
   focal_point: ''
   preview_only: no
 projects: []
+mathjax: true
 ---
 
 I have really become an evangelist for using [git](https://git-scm.com/) to manage research projects. I use it now for all of my research projects, whether working in collaboration of by myself. In a future post, I will outline what I think are the many advantages of using version control for research projects. This post is more of self-centered post. I want to have a reference for remembering how to set up a fresh git repository, so I don't have to keep googling it every time to make sure I get the syntax right. I do it to infrequently to remember it, but frequently enough that its a pain that I can't remember it. I am hoping this post may also be helpful to others wanting to get started with git.

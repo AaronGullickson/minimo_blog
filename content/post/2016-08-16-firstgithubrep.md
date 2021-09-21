@@ -14,6 +14,7 @@ image:
   focal_point: ''
   preview_only: no
 projects: []
+mathjax: true
 ---
 
 The [recent crisis of replication](https://en.wikipedia.org/wiki/Replication_crisis) in psychology has increased [the call](http://opensciencefederation.com/) to make our research analyses more open and reproducible. It is a movement that I fully support in principle, although there is little institutional support for it and limited incentive given the current norms of social science production and publication.
