@@ -1,0 +1,79 @@
+body {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    font-color: black;
+}
+
+blockquote {
+    font-size: 1em;
+}
+
+@media screen and (min-width: 920px) {
+    #header {
+        display: none;
+    }
+
+    #content {
+        padding-top: 1em;
+    }
+}
+
+strong {
+    font-weight: 700;
+}
+
+.entry-content a {
+    border-bottom: .08em solid #bdbdbd;
+}
+.entry-content a:visited {
+    border-bottom: .08em solid (--color-accent); 
+}
+.entry-content a:hover {
+    border-bottom: .08em solid (--color-accent); 
+    background-color: #ffe5b4;
+}
+
+
+p {
+    margin: 0 0 1em;
+}
+
+.copyright {
+    font-size: 80%;
+}
+
+pre {
+    font-size: 85%;
+}
+
+.widget-about .logo {
+    max-width: 20em;
+    margin-bottom: 0.5em;
+}
+
+.entry-footer {
+  /*display: none;*/
+}
+
+.type-page .entry-meta {
+    /*display: none;*/
+}
+
+.figure_note {
+    text-align: center;
+    margin-bottom: 2em;
+    font-size: 90%;
+}
+
+.menu li {
+    text-transform: none;
+}
+
+.home ul {
+    margin-left: 1em;
+}
+
+#sidebar {
+    /*background-color: #E6E6E6;*/
+}
