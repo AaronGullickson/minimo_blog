@@ -1,0 +1,119 @@
+---
+title: Curriculum Vitae
+date: '2021-09-21'
+linkTitle: Curriculum Vitae
+menu:
+  main:
+  sidebar:
+    identifier: cv
+weight: -90
+slug: cv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, 
+                      message = FALSE)
+library(tibble)
+library(dplyr)
+library(magrittr)
+library(glue)
+```
+
+
+```{r read-data, include=FALSE}
+data_location = "https://docs.google.com/spreadsheets/d/1scjvE65qm5YXS-JG4-CRPiLEqsz6p4y34WX6ipEct_w/edit#gid=917338460"
+cv_data <- googlesheets4::read_sheet(data_location, sheet = "entries", 
+                                     skip = 1, col_types = "c")
+```
+
+## Employment
+
+```{r employment, results='asis'}
+cv_data %>% 
+  filter(section=="employment") %>%
+  glue_data("`{when}` **{title}**, {org} ({other})  ")
+```
+
+## Education
+
+```{r, results='asis'}
+cv_data %>% 
+  filter(section=="education") %>%
+  glue_data("`{when}` **{title}**, {org} ({other})  ")
+```
+
+## Publications
+
+```{r pubs, results='asis'}
+cv_data %>% 
+  filter(section=="academic_articles") %>%
+  glue_data("`{when}` **{title}**, {org} ({other})  ")
+```
+
+## Grants Awarded
+
+```{r grants, results='asis'}
+cv_data %>% 
+  filter(section=="grants_awarded") %>%
+  glue_data("`{when}` **{title}**, {org} ({other})  ")
+```
+
+## Recent Presentations
+
+### Invited Talks
+
+```{r invited, results='asis'}
+cv_data %>% 
+  filter(section=="invited_talks") %>%
+  glue_data("`{when}` **{title}**, {org} ({other})  ")
+```
+
+### Conferences
+
+```{r conferences, results='asis'}
+cv_data %>% 
+  filter(section=="conference_talks") %>%
+  glue_data("`{when}` **{title}**, {org} ({other})  ")
+```
+
+## Courses Taught
+
+```{r  courses, results='asis'}
+cv_data %>% 
+  filter(section=="classes_taught") %>%
+  glue_data("**{title}**, {org}  ")
+```
+
+## Student Advising
+
+```{r advising, results='asis'}
+cv_data %>% 
+  filter(section=="students_advised") %>%
+  glue_data("`{when}` **{title}**, {org} ({other})  ")
+```
+
+## Service
+
+### Departmental
+
+```{r service-dept, results='asis'}
+cv_data %>% 
+  filter(section=="service_department") %>%
+  glue_data("`{when}` **{title}**, {org} ({other})  ")
+```
+
+### University
+
+```{r service-univ, results='asis'}
+cv_data %>% 
+  filter(section=="service_university") %>%
+  glue_data("`{when}` **{title}**, {org} ({other})  ")
+```
+
+### Professional
+
+```{r service-prof, results='asis'}
+cv_data %>% 
+  filter(section=="service_professional") %>%
+  glue_data("`{when}` **{title}**, {org} ({other})  ")
+```
