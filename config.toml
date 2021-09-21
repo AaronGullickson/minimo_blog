@@ -131,15 +131,15 @@ page = "/:slug/"
 
 [menu]
 [[menu.main]]
-  identifier = "about"
-  name = "About Me"
-  url = '/about/'
-  weight = -110
-[[menu.main]]
   identifier = "cv"
-  name = "CV"
+  name = "Curriculum Vitae"
   url = '/cv/'
   weight = -90
+[[menu.main]]
+  identifier = "statbook"
+  name = "Stat Textbook"
+  url = 'https://stat-analysis.netlify.app/'
+  weight = -80
 
 [blackfriday]
 hrefTargetBlank = true
