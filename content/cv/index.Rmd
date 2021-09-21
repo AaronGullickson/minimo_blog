@@ -20,11 +20,12 @@ library(glue)
 ```
 
 
-```{r read-data, include=FALSE}
+```{r read-data, include=FALSE} 
 data_location = "https://docs.google.com/spreadsheets/d/1scjvE65qm5YXS-JG4-CRPiLEqsz6p4y34WX6ipEct_w/edit#gid=917338460"
 cv_data <- googlesheets4::read_sheet(data_location, sheet = "entries", 
                                      skip = 1, col_types = "c")
 ```
+
 
 ## Employment
 
