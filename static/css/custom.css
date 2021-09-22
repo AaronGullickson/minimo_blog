@@ -88,7 +88,7 @@ pre {
 	width: 85%;
 }
 
-.entry-content .cv p code {
+.entry-content .cv code {
 	position: absolute;
 	left: -18%;
 	background: white;
@@ -98,3 +98,22 @@ pre {
 	font-size: 100%;
 	color: #aaa;*/
 }
+
+.entry-content .cv ul {
+	position: relative;
+	left: 15%;
+	margin: 0 0 0em 1.5em;
+	width: 80%;
+}
+
+.entry-content .cv p {
+  margin-bottom: 0em;
+}
+
+.entry-content h2:first-child, h3:first-child {
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+} 
+
+
+

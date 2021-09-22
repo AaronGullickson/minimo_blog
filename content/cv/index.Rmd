@@ -25,14 +25,18 @@ print_section <- function(section_name, separate_line=FALSE) {
   if(separate_line) {
 cv_data %>% 
     filter(section==section_name) %>%
-    mutate(with=ifelse(is.na(with), "", paste("(",with,")",sep=""))) %>%
+    mutate(with=ifelse(is.na(with), "", paste("(",with,")",sep="")),
+           description=ifelse(is.na(description_1), "  ",
+                       paste("\n\n- ",description_1,"\n\n",sep=""))) %>%
       glue_data("`{when}` **{what}**  
                 {where}  {with}  ")
   } else {
     cv_data %>% 
       filter(section==section_name) %>%
-      mutate(with=ifelse(is.na(with), "", paste("(",with,")",sep=""))) %>%
-      glue_data("`{when}` **{what}**, {where}  {with}  ")
+      mutate(with=ifelse(is.na(with), "", paste("(",with,")",sep="")),
+           description=ifelse(is.na(description_1), "  ",
+                       paste("\n\n- ",description_1,"\n\n",sep=""))) %>%
+      glue_data("`{when}` **{what}**, {where}  {with} {description}")
   }
 }
 ```
