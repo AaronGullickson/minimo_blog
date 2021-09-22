@@ -26,6 +26,7 @@ cv_data <- googlesheets4::read_sheet(data_location, sheet = "entries",
                                      skip = 1, col_types = "c")
 ```
 
+::: {.cv}
 
 ## Employment
 
@@ -118,3 +119,5 @@ cv_data %>%
   filter(section=="service_professional") %>%
   glue_data("`{when}` **{title}**, {org} ({other})  ")
 ```
+
+:::

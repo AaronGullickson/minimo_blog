@@ -77,3 +77,24 @@ pre {
 #sidebar {
     /*background-color: #E6E6E6;*/
 }
+
+/* CV-related */
+
+.entry-content .cv p {
+	position: relative;
+	left: 15%;
+	margin-bottom: 0.7em;
+	margin-right: 0;
+	width: 85%;
+}
+
+.entry-content .cv p code {
+	position: absolute;
+	left: -18%;
+	background: white;
+	border: none;
+	padding: 0;
+	/*font: normal normal;
+	font-size: 100%;
+	color: #aaa;*/
+}
