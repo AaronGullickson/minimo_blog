@@ -108,8 +108,28 @@ print_section("classes_taught")
 
 ## Student Advising
 
-```{r advising, results='asis'}
-print_section("students_advised")
+### Dissertations Advised
+
+```{r diss-advised, results='asis'}
+print_section("diss_advised")
+```
+
+### Comprehensive Exams Advised
+
+```{r comp-advised, results='asis'}
+print_section("comp_advised")
+```
+
+### Master's Papers Advised
+
+```{r master-advised, results='asis'}
+print_section("master_advised")
+```
+
+### Undergraduates Advised
+
+```{r undergrad-advised, results='asis'}
+print_section("undergrad_advised")
 ```
 
 ## Service
