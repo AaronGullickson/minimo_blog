@@ -74,6 +74,19 @@ pre {
     margin-left: 1em;
 }
 
+h2 {
+  color: #000088;
+  font-size: 1.5em;
+}
+
+h3 {
+  color: #964000;
+  font-size: 1.25em;
+}
+
+.sep-after:after, .sep-before:before {
+  border-bottom: .125em solid #964000;
+}
 #sidebar {
     /*background-color: #E6E6E6;*/
 }
@@ -94,9 +107,6 @@ pre {
 	background: white;
 	border: none;
 	padding: 0;
-	/*font: normal normal;
-	font-size: 100%;
-	color: #aaa;*/
 }
 
 .entry-content .cv ul {
@@ -111,9 +121,7 @@ pre {
 }
 
 .entry-content h2:first-child, h3:first-child {
-  margin-top: 0.5em;
+  margin-top: 0.5em; 
   margin-bottom: 0.25em;
 } 
-
-
-
+ 
