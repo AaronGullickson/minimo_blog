@@ -22,32 +22,31 @@ library(glue)
 
 ```{r functions, include=FALSE}
 print_section <- function(section_name, separate_line=FALSE) {
-  if(separate_line) {
-cv_data %>% 
-    filter(section==section_name) %>%
+  section <- cv_data %>% 
+    filter(section==section_name) %>% 
     mutate(with=ifelse(is.na(with), "", paste("(",with,")",sep="")),
-           description=ifelse(is.na(description_1), "  ",
-                       paste("\n\n- ",description_1,"\n\n",sep=""))) %>%
-      glue_data("`{when}` **{what}**  
+           when=ifelse(is.na(when), "", paste("`",when,"`",sep="")),
+           description_1=ifelse(is.na(description_1), "", 
+                                paste("- ",description_1,sep="")),
+           description_2=ifelse(is.na(description_2), "", 
+                                paste("- ",description_2,sep="")),
+           description_3=ifelse(is.na(description_3), "", 
+                                paste("- ",description_3,sep="")),
+           description=description_1,
+           description=ifelse(description_2=="", description,
+                              paste(description, description_2, sep="\n")),
+           description=ifelse(description_3=="", description,
+                              paste(description, description_3, sep="\n")),
+           description=ifelse(description=="", "  ",
+                              paste("\n\n",description,"\n\n",sep="")))  
+  
+  if(separate_line) {
+    section %>%
+      glue_data("{when} **{what}**  
                 {where}  {with}  ")
   } else {
-    cv_data %>% 
-      filter(section==section_name) %>% 
-      mutate(with=ifelse(is.na(with), "", paste("(",with,")",sep="")),
-             description_1=ifelse(is.na(description_1), "", 
-                                  paste("- ",description_1,sep="")),
-             description_2=ifelse(is.na(description_2), "", 
-                                  paste("- ",description_2,sep="")),
-             description_3=ifelse(is.na(description_3), "", 
-                                  paste("- ",description_3,sep="")),
-             description=description_1,
-             description=ifelse(description_2=="", description,
-                                paste(description, description_2, sep="\n")),
-             description=ifelse(description_3=="", description,
-                                paste(description, description_3, sep="\n")),
-             description=ifelse(description=="", "  ",
-                                paste("\n\n",description,"\n\n",sep=""))) %>%
-      glue_data("`{when}` **{what}**, {where}  {with} {description}")
+    section %>%
+      glue_data("{when} **{what}**, {where}  {with} {description}")
   }
 }
 ```
@@ -101,9 +100,10 @@ print_section("conference_talks")
 ## Courses Taught
 
 ```{r  courses, results='asis'}
-cv_data %>% 
-  filter(section=="classes_taught") %>%
-  glue_data("**{what}**, {where}  ")
+print_section("classes_taught")
+#cv_data %>% 
+#  filter(section=="classes_taught") %>%
+#  glue_data("**{what}**, {where}  ")
 ```
 
 ## Student Advising
