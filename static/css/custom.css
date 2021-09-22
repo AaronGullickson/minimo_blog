@@ -112,16 +112,17 @@ h3 {
 .entry-content .cv ul {
 	position: relative;
 	left: 15%;
-	margin: 0 0 0em 1.5em;
+	margin: -0.5em 0 0em 1.5em;
 	width: 80%;
-}
-
+}/*
 .entry-content .cv p {
   margin-bottom: 0em;
 }
 
-.entry-content h2:first-child, h3:first-child {
+.entry-content .cv h2:first-child, h3:first-child {
   margin-top: 0.5em; 
   margin-bottom: 0.25em;
 } 
+*/
+
  
