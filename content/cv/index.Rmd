@@ -57,6 +57,9 @@ cv_data <- googlesheets4::read_sheet(data_location, sheet = "entries",
                                      skip = 1, col_types = "c")
 ```
 
+
+[Download as PDF](aarongullickson_cv.pdf)
+
 ::: {.cv}
 
 ## Employment
