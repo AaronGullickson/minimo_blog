@@ -74,6 +74,47 @@ pre {
     margin-left: 1em;
 }
 
+h2 {
+  color: #000080;
+  font-size: 1.5em;
+}
+
+h3 {
+  color: #964000;
+  font-size: 1.25em;
+}
+
+.sep-after:after, .sep-before:before {
+  border-bottom: .125em solid #964000;
+}
 #sidebar {
     /*background-color: #E6E6E6;*/
 }
+
+/* CV-related */
+
+.entry-content .cv p {
+	position: relative;
+	left: 15%;
+	margin-bottom: 0.7em;
+	margin-right: 0;
+	width: 85%;
+}
+
+.entry-content .cv code {
+	position: absolute;
+	left: -18%;
+	background: white;
+	border: none;
+	padding: 0;
+}
+
+.entry-content .cv ul {
+	position: relative;
+	left: 15%;
+	margin: -0.5em 0 0em 1.5em;
+	width: 80%;
+}
+
+
+ 

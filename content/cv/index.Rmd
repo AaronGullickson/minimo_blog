@@ -1,0 +1,159 @@
+---
+title: Curriculum Vitae
+date: '2021-09-21'
+linkTitle: Curriculum Vitae
+menu:
+  main:
+  sidebar:
+    identifier: cv
+weight: -90
+slug: cv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, 
+                      message = FALSE)
+library(tibble)
+library(dplyr)
+library(magrittr)
+library(glue)
+```
+
+
+```{r functions, include=FALSE}
+print_section <- function(section_name, separate_line=FALSE) {
+  section <- cv_data %>% 
+    filter(section==section_name) %>% 
+    mutate(with=ifelse(is.na(with), "", paste("(",with,")",sep="")),
+           when=ifelse(is.na(when), "", paste("`",when,"`",sep="")),
+           description_1=ifelse(is.na(description_1), "", 
+                                paste("- ",description_1,sep="")),
+           description_2=ifelse(is.na(description_2), "", 
+                                paste("- ",description_2,sep="")),
+           description_3=ifelse(is.na(description_3), "", 
+                                paste("- ",description_3,sep="")),
+           description=description_1,
+           description=ifelse(description_2=="", description,
+                              paste(description, description_2, sep="\n")),
+           description=ifelse(description_3=="", description,
+                              paste(description, description_3, sep="\n")),
+           description=ifelse(description=="", "  ",
+                              paste("\n\n",description,"\n\n",sep="")))  
+  
+  if(separate_line) {
+    section %>%
+      glue_data("{when} **{what}**  
+                {where}  {with}  ")
+  } else {
+    section %>%
+      glue_data("{when} **{what}**, {where}  {with} {description}")
+  }
+}
+```
+
+```{r read-data, include=FALSE} 
+data_location = "https://docs.google.com/spreadsheets/d/1scjvE65qm5YXS-JG4-CRPiLEqsz6p4y34WX6ipEct_w/edit#gid=917338460"
+cv_data <- googlesheets4::read_sheet(data_location, sheet = "entries", 
+                                     skip = 1, col_types = "c")
+```
+
+
+[Download as PDF](aarongullickson_cv.pdf)
+
+::: {.cv}
+
+## Employment
+
+```{r employment, results='asis'}
+print_section("employment", separate_line = FALSE)
+```
+
+## Education
+
+```{r, results='asis'}
+print_section("education", separate_line = FALSE)
+```
+
+## Publications
+
+```{r pubs, results='asis'}
+print_section("academic_articles")
+```
+
+## Grants Awarded
+
+```{r grants, results='asis'}
+print_section("grants_awarded", separate_line = FALSE)
+```
+
+## Recent Presentations
+
+### Invited Talks
+
+```{r invited, results='asis'}
+print_section("invited_talks")
+```
+
+### Conferences
+
+```{r conferences, results='asis'}
+print_section("conference_talks")
+```
+
+## Courses Taught
+
+```{r  courses, results='asis'}
+print_section("classes_taught")
+#cv_data %>% 
+#  filter(section=="classes_taught") %>%
+#  glue_data("**{what}**, {where}  ")
+```
+
+## Student Advising
+
+### Dissertations Advised
+
+```{r diss-advised, results='asis'}
+print_section("diss_advised")
+```
+
+### Comprehensive Exams Advised
+
+```{r comp-advised, results='asis'}
+print_section("comp_advised")
+```
+
+### Master's Papers Advised
+
+```{r master-advised, results='asis'}
+print_section("master_advised")
+```
+
+### Undergraduates Advised
+
+```{r undergrad-advised, results='asis'}
+print_section("undergrad_advised")
+```
+
+## Service
+
+### Departmental
+
+```{r service-dept, results='asis'}
+print_section("service_department")
+```
+
+### University
+
+```{r service-univ, results='asis'}
+print_section("service_university")
+```
+
+### Professional
+
+```{r service-prof, results='asis'}
+print_section("service_professional")
+
+```
+
+:::
