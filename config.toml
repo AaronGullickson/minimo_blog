@@ -5,7 +5,7 @@ copyright = ""
 
 theme = "minimo"
 
-disqusShortname = ""
+disqusShortname = "aaron-gullicksons-academic-blog"
 googleAnalytics = ""
 
 Paginate = 10
@@ -85,7 +85,7 @@ google_scholar = "LCTjizQAAAAJ"
 #youtube = "UCT-U0rNerYxItGcuoPX-WYA"
 
 [params.comments]
-enable = false
+enable = true
 
 # Isso: https://posativ.org/isso/
 [params.comments.isso]

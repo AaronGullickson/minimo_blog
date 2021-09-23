@@ -1,6 +1,7 @@
 ---
 title: Curriculum Vitae
 summary: "Aaron Gullickson's CV"
+comments: false
 date: '2021-09-21'
 linkTitle: Curriculum Vitae
 menu:
