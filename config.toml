@@ -1,4 +1,4 @@
-baseURL = "http://www.example.com"
+baseURL = "https://aarongullickson.netlify.app/"
 title = "Aaron Gullickson"
 # for smart copyright line, leave this blank and check [params.copyright]
 copyright = ""
@@ -33,18 +33,18 @@ gopher = "" # used in 404 template ( Generator: https://gopherize.me )
 
 [params.copyright]
 prefix = ""
-holder = "MunifTanjim"
-startYear = "2017"
-suffix = ""
+holder = "Aaron Gullickson."
+startYear = "2016"
+suffix = "Site built in Hugo based on [Minimo](https://minimo.netlify.app/) theme by Munif Tanjim."
 
 [params.settings]
 # date & time format: https://golang.org/pkg/time/
-dateFormat = "2006, Jan 02"
-listDateFormat = "2006, Jan 02"
+dateFormat = "Jan 02 2006"
+listDateFormat = "Jan 02 2006"
 archiveDateFormat = "Jan 02"
 hideEntryNavigation = ["page"] # boolean / array of sections
 hideEntryMeta = ["page"] # boolean / array of sections
-showReadingTime = true
+showReadingTime = false
 showLastmod = true
 taxonomyCloudShuffle = true
 accentColor = "#000080"
