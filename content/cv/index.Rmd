@@ -2,7 +2,7 @@
 title: Curriculum Vitae
 summary: "Aaron Gullickson's CV"
 comments: false
-date: '2021-10-12'
+date: '2022-09-19'
 linkTitle: Curriculum Vitae
 menu:
   main:
@@ -68,7 +68,7 @@ cv_data <- googlesheets4::read_sheet(data_location, sheet = "entries",
 
 ```{r employment, results='asis'}
 print_section("employment", separate_line = FALSE)
-```
+``` 
 
 ## Education
 
