@@ -57,7 +57,7 @@ print_section <- function(section_name,  separate_line=FALSE) {
 data_location = "https://docs.google.com/spreadsheets/d/1scjvE65qm5YXS-JG4-CRPiLEqsz6p4y34WX6ipEct_w/edit#gid=917338460"
 cv_data <- googlesheets4::read_sheet(data_location, sheet = "entries", 
                                      skip = 1, col_types = "c")
-```
+``` 
 
 
 [Download as PDF](aarongullickson_cv.pdf)
@@ -68,7 +68,7 @@ cv_data <- googlesheets4::read_sheet(data_location, sheet = "entries",
 
 ```{r employment, results='asis'}
 print_section("employment", separate_line = FALSE)
-``` 
+```
 
 ## Education
 
