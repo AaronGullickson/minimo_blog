@@ -2,7 +2,7 @@
 title: Curriculum Vitae
 summary: "Aaron Gullickson's CV"
 comments: false
-date: '2022-09-19'
+date: '2024-06-21'
 linkTitle: Curriculum Vitae
 menu:
   main:
@@ -55,7 +55,7 @@ print_section <- function(section_name,  separate_line=FALSE) {
 
 ```{r read-data, include=FALSE} 
 data_location = "https://docs.google.com/spreadsheets/d/1scjvE65qm5YXS-JG4-CRPiLEqsz6p4y34WX6ipEct_w/edit#gid=917338460"
-googlesheets4::gs4_deauth()
+googlesheets4::gs4_deauth() 
 cv_data <- googlesheets4::read_sheet(data_location, sheet = "entries", 
                                      skip = 1, col_types = "c")
 ```
