@@ -135,6 +135,11 @@ page = "/:slug/"
   name = "Stat Textbook"
   url = 'https://stat-analysis.netlify.app/'
   weight = -80
+[[menu.main]]
+  identifier = "practicalanaylsis"
+  name = "Practical Analysis with R"
+  url = 'https://practical-data-analysis-r.netlify.app/'
+  weight = -90
 
 [blackfriday]
 hrefTargetBlank = true
