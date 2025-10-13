@@ -2,7 +2,7 @@
 title: Curriculum Vitae
 summary: "Aaron Gullickson's CV"
 comments: false
-date: '2024-10-15'
+date: '2025-01-13'
 linkTitle: Curriculum Vitae
 menu:
   main:
@@ -18,7 +18,8 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE,
 library(tibble)
 library(dplyr)
 library(magrittr)
-library(glue) 
+library(glue)
+
 ```
 
 
