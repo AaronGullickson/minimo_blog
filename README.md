@@ -1,4 +1,4 @@
-**This has now been replaced with a quarto-based website that build directly from GH**
+**This has now been replaced with a quarto-based website that build directly from GH but it needs to remain here to provide redirects from the netlify address**
 
 # Professional Blog
 
