@@ -1,3 +1,5 @@
+** This has now been replaced with a quarto-based website that build directly from GH **
+
 # Professional Blog
 
 This is the [hugo](https://gohugo.io/) content for my professional blog which is deployed at [aarongullickson.netlify.app](https://aarongullickson.netlify.app). The layout is based on the [Minimo](https://minimo.netlify.app/) theme by Munif Tanjim. The site is created and maintained using the [blogdown](https://github.com/rstudio/blogdown) package in R. 
